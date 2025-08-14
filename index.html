@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Tuition Institute</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box;}
+    body {font-family: 'Poppins', sans-serif; line-height:1.6; color:#333;}
+    html {scroll-behavior:smooth;}
+
+    header {
+      position:fixed; top:0; left:0; width:100%; background:#222; color:#fff;
+      display:flex; justify-content:space-between; align-items:center;
+      padding:10px 20px; z-index:1000;
+    }
+    header h1 {font-size:20px;}
+    nav a {
+      color:#fff; text-decoration:none; margin:0 10px; font-weight:500;
+    }
+    nav a:hover {color:#ff5252;}
+    section {padding:80px 20px; min-height:100vh;}
+    .hero {
+      background:url('https://via.placeholder.com/1600x600') center/cover no-repeat;
+      color:#fff; text-align:center; display:flex; flex-direction:column; justify-content:center;
+    }
+    .hero h2 {font-size:2.5rem; margin-bottom:20px; text-shadow:2px 2px 4px rgba(0,0,0,0.5);}
+    .hero p {font-size:1.2rem; margin-bottom:30px;}
+    .btn {
+      display:inline-block; background:#ff5252; color:#fff; padding:10px 20px;
+      border-radius:5px; text-decoration:none; font-weight:600;
+    }
+    .btn:hover {background:#e04848;}
+
+    .section-title {text-align:center; margin-bottom:40px; font-size:2rem; font-weight:600;}
+
+    .about img {max-width:500px; width:100%; border-radius:10px; margin-top:20px;}
+    .about-content {display:flex; flex-wrap:wrap; gap:20px; justify-content:center; align-items:center;}
+
+    .cards {display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:20px;}
+    .card {
+      background:#fff; border-radius:10px; padding:20px; text-align:center;
+      box-shadow:0 4px 6px rgba(0,0,0,0.1); transition:transform 0.3s;
+    }
+    .card:hover {transform:translateY(-5px);}
+    .card img {max-width:80px; margin-bottom:15px;}
+
+    .teachers {display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:20px;}
+    .teacher-card {
+      background:#fff; border-radius:10px; padding:20px; text-align:center;
+      box-shadow:0 4px 6px rgba(0,0,0,0.1);
+    }
+    .teacher-card img {border-radius:50%; width:120px; height:120px; object-fit:cover; margin-bottom:10px;}
+
+    .registration {text-align:center;}
+    .contact-form {
+      max-width:500px; margin:0 auto; display:flex; flex-direction:column; gap:15px;
+    }
+    .contact-form input, .contact-form textarea {
+      padding:10px; border:1px solid #ccc; border-radius:5px;
+    }
+    .contact-form button {background:#ff5252; color:#fff; padding:10px; border:none; border-radius:5px;}
+    .contact-form button:hover {background:#e04848;}
+
+    footer {
+      background:#222; color:#fff; text-align:center; padding:20px;
+    }
+
+    @media(max-width:768px) {
+      header {flex-direction:column; align-items:flex-start;}
+      nav {margin-top:10px;}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Our Tuition Institute</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#subjects">Subjects</a>
+      <a href="#teachers">Our Teachers</a>
+      <a href="#registration">Registration</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h2>Quality Tuition for Maths, English, Psychology & Robotics</h2>
+    <p>Learn from top students, engineers, and experienced educators</p>
+    <a href="#registration" class="btn">Register Now</a>
+  </section>
+
+  <section id="about" class="about">
+    <h2 class="section-title">About Us</h2>
+    <div class="about-content">
+      <div>
+        <p>We teach Maths (Grade 2 to 10, VCE General Maths Units 1&2 and 3&4, VCE Maths Methods Units 1&2 and 3&4), 
+        English (Grade 2 to Grade 10), Psychology (VCE Units 1&2 and 3&4), and Robotics for Juniors. Our teachers 
+        are from MacRobertson Girls’ School, Suzanne Cory High School, University of Melbourne, and are experienced engineers.</p>
+      </div>
+      <img src="https://via.placeholder.com/500x300" alt="About us image">
+    </div>
+  </section>
+
+  <section id="subjects">
+    <h2 class="section-title">Our Subjects</h2>
+    <div class="cards">
+      <div class="card"><img src="https://via.placeholder.com/80" alt="Maths"><h3>Maths (Grade 2–10)</h3></div>
+      <div class="card"><img src="https://via.placeholder.com/80" alt="General Maths"><h3>VCE General Maths Units 1&2, 3&4</h3></div>
+      <div class="card"><img src="https://via.placeholder.com/80" alt="Maths Methods"><h3>VCE Maths Methods Units 1&2, 3&4</h3></div>
+      <div class="card"><img src="https://via.placeholder.com/80" alt="English"><h3>English (Grade 2–10)</h3></div>
+      <div class="card"><img src="https://via.placeholder.com/80" alt="Psychology"><h3>Psychology VCE Units 1&2, 3&4</h3></div>
+      <div class="card"><img src="https://via.placeholder.com/80" alt="Robotics"><h3>Robotics for Juniors</h3></div>
+    </div>
+  </section>
+
+  <section id="teachers">
+    <h2 class="section-title">Our Teachers</h2>
+    <div class="teachers">
+      <div class="teacher-card">
+        <img src="https://via.placeholder.com/120" alt="Teacher">
+        <h4>Jane Doe</h4>
+        <p>MacRobertson Girls’ School, VCE Maths Specialist</p>
+      </div>
+      <div class="teacher-card">
+        <img src="https://via.placeholder.com/120" alt="Teacher">
+        <h4>John Smith</h4>
+        <p>University of Melbourne Engineering Student, Robotics Instructor</p>
+      </div>
+      <div class="teacher-card">
+        <img src="https://via.placeholder.com/120" alt="Teacher">
+        <h4>Sarah Lee</h4>
+        <p>Suzanne Cory High School, English and Psychology</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="registration" class="registration">
+    <h2 class="section-title">Registration</h2>
+    <p>Click below to register for our classes.</p>
+    <a href="https://forms.gle/abcdefgh1234567" target="_blank" class="btn">Register Now</a>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p style="text-align:center; margin-top:20px;">📍 Melbourne, Australia | 📞 0400 000 000 | ✉️ info@tuition.com</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Our Tuition Institute. All Rights Reserved.</p>
+    <p><a href="#home" style="color:#ff5252;">Back to Top</a></p>
+  </footer>
+
+</body>
+</html>
