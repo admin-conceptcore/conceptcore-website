@@ -1,119 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Tuition Institute</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Concept Core Institute</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * {margin:0; padding:0; box-sizing:border-box;}
-    body {font-family: 'Poppins', sans-serif; line-height:1.6; color:#333;}
-    html {scroll-behavior:smooth;}
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Poppins',sans-serif; color:#333; line-height:1.6; }
+    html { scroll-behavior:smooth; }
+
+    /* Color palette */
+    :root {
+      --primary: #4b79a1; /* muted blue */
+      --secondary: #ff6f61; /* coral */
+      --accent: #fceabb; /* soft cream */
+    }
 
     header {
-      position:fixed; top:0; left:0; width:100%; background:#222; color:#fff;
+      position:fixed; top:0; width:100%; background: var(--primary); color:#fff;
       display:flex; justify-content:space-between; align-items:center;
-      padding:10px 20px; z-index:1000;
+      padding:15px 30px; z-index:1000;
     }
-    header h1 {font-size:20px;}
     nav a {
-      color:#fff; text-decoration:none; margin:0 10px; font-weight:500;
+      color:#fff; margin:0 12px; text-decoration:none; font-weight:500;
     }
-    nav a:hover {color:#ff5252;}
-    section {padding:80px 20px; min-height:100vh;}
+    nav a:hover { color:var(--accent); }
+
     .hero {
-      background:url('https://via.placeholder.com/1600x600') center/cover no-repeat;
-      color:#fff; text-align:center; display:flex; flex-direction:column; justify-content:center;
+      margin-top:60px; /* for fixed header */
+      height:80vh; display:flex; flex-direction:column; justify-content:center; align-items:center;
+      background: linear-gradient(135deg, rgba(75,121,161,0.85), rgba(255,111,97,0.85)),
+        url('https://images.pexels.com/photos/4145150/pexels-photo-4145150.jpeg') center/cover no-repeat;
+      color:#fff; text-align:center; padding:20px;
     }
-    .hero h2 {font-size:2.5rem; margin-bottom:20px; text-shadow:2px 2px 4px rgba(0,0,0,0.5);}
-    .hero p {font-size:1.2rem; margin-bottom:30px;}
-    .btn {
-      display:inline-block; background:#ff5252; color:#fff; padding:10px 20px;
-      border-radius:5px; text-decoration:none; font-weight:600;
+    .hero h1 { font-size:3rem; margin-bottom:15px; text-shadow:2px 2px 5px rgba(0,0,0,0.4); }
+    .hero p { font-size:1.2rem; margin-bottom:20px; }
+    .btn { background:var(--secondary); color:#fff; padding:12px 25px; border:none; border-radius:5px;
+           font-size:1rem; text-decoration:none; font-weight:600; }
+    .btn:hover { background:#e65c58; }
+
+    section { padding:80px 20px; }
+    .section-title { text-align:center; font-size:2.2rem; margin-bottom:40px; color:var(--primary); }
+
+    .cards {
+      display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:20px;
     }
-    .btn:hover {background:#e04848;}
-
-    .section-title {text-align:center; margin-bottom:40px; font-size:2rem; font-weight:600;}
-
-    .about img {max-width:500px; width:100%; border-radius:10px; margin-top:20px;}
-    .about-content {display:flex; flex-wrap:wrap; gap:20px; justify-content:center; align-items:center;}
-
-    .cards {display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:20px;}
     .card {
-      background:#fff; border-radius:10px; padding:20px; text-align:center;
+      background:var(--accent); border-radius:10px; padding:20px; text-align:center;
       box-shadow:0 4px 6px rgba(0,0,0,0.1); transition:transform 0.3s;
     }
-    .card:hover {transform:translateY(-5px);}
-    .card img {max-width:80px; margin-bottom:15px;}
+    .card:hover { transform:translateY(-5px); }
+    .card img { width:60px; height:60px; object-fit:cover; margin-bottom:10px; }
 
-    .teachers {display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:20px;}
+    .teachers {
+      display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:20px;
+    }
     .teacher-card {
-      background:#fff; border-radius:10px; padding:20px; text-align:center;
+      background:#fff; padding:20px; border-radius:8px; text-align:center;
       box-shadow:0 4px 6px rgba(0,0,0,0.1);
     }
-    .teacher-card img {border-radius:50%; width:120px; height:120px; object-fit:cover; margin-bottom:10px;}
+    .teacher-card img { width:100px; height:100px; border-radius:50%; object-fit:cover; margin-bottom:10px; }
 
-    .registration {text-align:center;}
     .contact-form {
-      max-width:500px; margin:0 auto; display:flex; flex-direction:column; gap:15px;
+      max-width:450px; margin:0 auto; display:flex; flex-direction:column; gap:15px;
     }
     .contact-form input, .contact-form textarea {
-      padding:10px; border:1px solid #ccc; border-radius:5px;
+      padding:10px; border:1px solid var(--primary); border-radius:5px;
     }
-    .contact-form button {background:#ff5252; color:#fff; padding:10px; border:none; border-radius:5px;}
-    .contact-form button:hover {background:#e04848;}
+    .contact-form button {
+      background:var(--primary); color:#fff; padding:12px; border:none; border-radius:5px; font-weight:600;
+    }
+    .contact-form button:hover { background:#3a5c7a; }
 
     footer {
-      background:#222; color:#fff; text-align:center; padding:20px;
+      background:var(--primary); color:#fff; text-align:center; padding:20px;
     }
+    footer a { color:var(--accent); text-decoration:none; }
+    footer a:hover { text-decoration:underline; }
 
     @media(max-width:768px) {
-      header {flex-direction:column; align-items:flex-start;}
-      nav {margin-top:10px;}
+      .hero h1 { font-size:2.2rem; }
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Our Tuition Institute</h1>
+    <h2>The Concept Core Institute</h2>
     <nav>
       <a href="#home">Home</a>
-      <a href="#about">About Us</a>
+      <a href="#about">About</a>
       <a href="#subjects">Subjects</a>
-      <a href="#teachers">Our Teachers</a>
-      <a href="#registration">Registration</a>
+      <a href="#teachers">Teachers</a>
+      <a href="#registration">Register</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <section id="home" class="hero">
-    <h2>Quality Tuition for Maths, English, Psychology & Robotics</h2>
-    <p>Learn from top students, engineers, and experienced educators</p>
+    <h1>Engaging Tuition in Maths, English, Psychology & Robotics</h1>
+    <p>Expert tutors from top schools, university & engineering backgrounds</p>
     <a href="#registration" class="btn">Register Now</a>
   </section>
 
-  <section id="about" class="about">
+  <section id="about">
     <h2 class="section-title">About Us</h2>
-    <div class="about-content">
-      <div>
-        <p>We teach Maths (Grade 2 to 10, VCE General Maths Units 1&2 and 3&4, VCE Maths Methods Units 1&2 and 3&4), 
-        English (Grade 2 to Grade 10), Psychology (VCE Units 1&2 and 3&4), and Robotics for Juniors. Our teachers 
-        are from MacRobertson Girls’ School, Suzanne Cory High School, University of Melbourne, and are experienced engineers.</p>
-      </div>
-      <img src="https://via.placeholder.com/500x300" alt="About us image">
-    </div>
+    <p style="max-width:800px; margin:0 auto; text-align:center;">
+      We teach Maths (Grade 2–10, VCE General Maths 1&2 & 3&4, VCE Maths Methods 1&2 & 3&4),
+      English (Grade 2–10), Psychology (VCE 1&2 & 3&4), and Robotics for Juniors. Our tutors come from
+      MacRobertson Girls’ School, Suzanne Cory High School, University of Melbourne, and engineering sectors.
+    </p>
   </section>
 
   <section id="subjects">
     <h2 class="section-title">Our Subjects</h2>
     <div class="cards">
-      <div class="card"><img src="https://via.placeholder.com/80" alt="Maths"><h3>Maths (Grade 2–10)</h3></div>
-      <div class="card"><img src="https://via.placeholder.com/80" alt="General Maths"><h3>VCE General Maths Units 1&2, 3&4</h3></div>
-      <div class="card"><img src="https://via.placeholder.com/80" alt="Maths Methods"><h3>VCE Maths Methods Units 1&2, 3&4</h3></div>
-      <div class="card"><img src="https://via.placeholder.com/80" alt="English"><h3>English (Grade 2–10)</h3></div>
-      <div class="card"><img src="https://via.placeholder.com/80" alt="Psychology"><h3>Psychology VCE Units 1&2, 3&4</h3></div>
-      <div class="card"><img src="https://via.placeholder.com/80" alt="Robotics"><h3>Robotics for Juniors</h3></div>
+      <div class="card">
+        <img src="https://image.reshot.com/free-icon/mathematics.svg" alt="Maths Icon">
+        <h3>Maths (Grade 2–10)</h3>
+      </div>
+      <div class="card">
+        <img src="https://image.reshot.com/free-icon/general-maths.svg" alt="General Maths Icon">
+        <h3>VCE General Maths 1&2 & 3&4</h3>
+      </div>
+      <div class="card">
+        <img src="https://image.reshot.com/free-icon/math-methods.svg" alt="Maths Methods Icon">
+        <h3>VCE Maths Methods 1&2 & 3&4</h3>
+      </div>
+      <div class="card">
+        <img src="https://image.reshot.com/free-icon/english.svg" alt="English Icon">
+        <h3>English (Grade 2–10)</h3>
+      </div>
+      <div class="card">
+        <img src="https://image.reshot.com/free-icon/psychology.svg" alt="Psychology Icon">
+        <h3>Psychology VCE 1&2 & 3&4</h3>
+      </div>
+      <div class="card">
+        <img src="https://image.reshot.com/free-icon/robotics.svg" alt="Robotics Icon">
+        <h3>Robotics for Juniors</h3>
+      </div>
     </div>
   </section>
 
@@ -121,27 +146,29 @@
     <h2 class="section-title">Our Teachers</h2>
     <div class="teachers">
       <div class="teacher-card">
-        <img src="https://via.placeholder.com/120" alt="Teacher">
+        <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg" alt="Teacher">
         <h4>Jane Doe</h4>
-        <p>MacRobertson Girls’ School, VCE Maths Specialist</p>
+        <p>MacRobertson Girls’ School – Maths Specialist</p>
       </div>
       <div class="teacher-card">
-        <img src="https://via.placeholder.com/120" alt="Teacher">
+        <img src="https://images.pexels.com/photos/4145150/pexels-photo-4145150.jpeg" alt="Teacher">
         <h4>John Smith</h4>
-        <p>University of Melbourne Engineering Student, Robotics Instructor</p>
+        <p>University of Melbourne – Robotics Instructor</p>
       </div>
       <div class="teacher-card">
-        <img src="https://via.placeholder.com/120" alt="Teacher">
+        <img src="https://images.pexels.com/photos/4145197/pexels-photo-4145197.jpeg" alt="Teacher">
         <h4>Sarah Lee</h4>
-        <p>Suzanne Cory High School, English and Psychology</p>
+        <p>Suzanne Cory High School – English & Psychology</p>
       </div>
     </div>
   </section>
 
-  <section id="registration" class="registration">
+  <section id="registration">
     <h2 class="section-title">Registration</h2>
-    <p>Click below to register for our classes.</p>
-    <a href="https://forms.gle/abcdefgh1234567" target="_blank" class="btn">Register Now</a>
+    <p style="text-align:center;">Ready to begin? Click to register now.</p>
+    <div style="text-align:center;">
+      <a href="https://forms.gle/yourSampleFormLink" target="_blank" class="btn">Register Now</a>
+    </div>
   </section>
 
   <section id="contact">
@@ -152,13 +179,14 @@
       <textarea rows="5" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
-    <p style="text-align:center; margin-top:20px;">📍 Melbourne, Australia | 📞 0400 000 000 | ✉️ info@tuition.com</p>
+    <p style="text-align:center; margin-top:20px;">
+      Melbourne, Australia | 0400 000 000 | info@conceptcore.edu.au
+    </p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Our Tuition Institute. All Rights Reserved.</p>
-    <p><a href="#home" style="color:#ff5252;">Back to Top</a></p>
+    <p>&copy; 2025 The Concept Core Institute. All Rights Reserved.</p>
+    <p><a href="#home">Back to Top</a></p>
   </footer>
-
 </body>
 </html>
