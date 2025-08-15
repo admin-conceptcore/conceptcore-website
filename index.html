@@ -183,14 +183,16 @@
     </div>
   </section>
 
- <section id="timetable">
+<section id="timetable">
   <h2 class="section-title">Class Time Table</h2>
   <div style="max-width: 1100px; margin: 0 auto;">
 
     <!-- First Row -->
     <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-bottom: 40px;">
-      <!-- Left Table -->
+      
+      <!-- Maths Table -->
       <div style="flex: 1 1 480px; overflow-x: auto;">
+        <h3 style="text-align:center; color: var(--primary); margin-bottom: 10px;">Maths Time Table</h3>
         <table style="width:100%; border-collapse:collapse; background:#fff; box-shadow:0 4px 6px rgba(0,0,0,0.1);">
           <thead style="background-color: var(--primary); color: white;">
             <tr>
@@ -205,7 +207,23 @@
               <td style="padding:12px; border:1px solid #ddd;">Monday</td>
               <td style="padding:12px; border:1px solid #ddd;">4:00 PM – 5:00 PM</td>
             </tr>
-            <tr style="background-color:#f9f9f9;">
+          </tbody>
+        </table>
+      </div>
+
+      <!-- English Table -->
+      <div style="flex: 1 1 480px; overflow-x: auto;">
+        <h3 style="text-align:center; color: var(--primary); margin-bottom: 10px;">English Time Table</h3>
+        <table style="width:100%; border-collapse:collapse; background:#fff; box-shadow:0 4px 6px rgba(0,0,0,0.1);">
+          <thead style="background-color: var(--primary); color: white;">
+            <tr>
+              <th style="padding:12px; border:1px solid #ddd;">Subject</th>
+              <th style="padding:12px; border:1px solid #ddd;">Day of the Week</th>
+              <th style="padding:12px; border:1px solid #ddd;">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
               <td style="padding:12px; border:1px solid #ddd;">English (Grade 2–10)</td>
               <td style="padding:12px; border:1px solid #ddd;">Wednesday</td>
               <td style="padding:12px; border:1px solid #ddd;">4:00 PM – 5:00 PM</td>
@@ -213,9 +231,14 @@
           </tbody>
         </table>
       </div>
+    </div>
 
-      <!-- Right Table -->
+    <!-- Second Row -->
+    <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+      
+      <!-- VCE Table -->
       <div style="flex: 1 1 480px; overflow-x: auto;">
+        <h3 style="text-align:center; color: var(--primary); margin-bottom: 10px;">VCE Time Table</h3>
         <table style="width:100%; border-collapse:collapse; background:#fff; box-shadow:0 4px 6px rgba(0,0,0,0.1);">
           <thead style="background-color: var(--primary); color: white;">
             <tr>
@@ -231,34 +254,10 @@
               <td style="padding:12px; border:1px solid #ddd;">5:00 PM – 6:30 PM</td>
             </tr>
             <tr style="background-color:#f9f9f9;">
-              <td style="padding:12px; border:1px solid #ddd;">Psychology (VCE)</td>
+              <td style="padding:12px; border:1px solid #ddd;">VCE Psychology</td>
               <td style="padding:12px; border:1px solid #ddd;">Thursday</td>
               <td style="padding:12px; border:1px solid #ddd;">6:00 PM – 7:00 PM</td>
             </tr>
-            <tr>
-              <td style="padding:12px; border:1px solid #ddd;">Electronics & Robotics</td>
-              <td style="padding:12px; border:1px solid #ddd;">Saturday</td>
-              <td style="padding:12px; border:1px solid #ddd;">10:00 AM – 11:00 AM</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- Second Row -->
-    <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
-      <!-- Third Table -->
-      <div style="flex: 1 1 480px; overflow-x: auto;">
-        <table style="width:100%; border-collapse:collapse; background:#fff; box-shadow:0 4px 6px rgba(0,0,0,0.1);">
-          <thead style="background-color: var(--primary); color: white;">
-            <tr>
-              <th style="padding:12px; border:1px solid #ddd;">Subject</th>
-              <th style="padding:12px; border:1px solid #ddd;">Day of the Week</th>
-              <th style="padding:12px; border:1px solid #ddd;">Time</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Add your new timetable rows here -->
             <tr>
               <td style="padding:12px; border:1px solid #ddd;">VCE English Unit 1 & 2</td>
               <td style="padding:12px; border:1px solid #ddd;">Friday</td>
@@ -273,8 +272,9 @@
         </table>
       </div>
 
-      <!-- Fourth Table -->
+      <!-- Electronics Table -->
       <div style="flex: 1 1 480px; overflow-x: auto;">
+        <h3 style="text-align:center; color: var(--primary); margin-bottom: 10px;">Electronics Time Table</h3>
         <table style="width:100%; border-collapse:collapse; background:#fff; box-shadow:0 4px 6px rgba(0,0,0,0.1);">
           <thead style="background-color: var(--primary); color: white;">
             <tr>
@@ -284,13 +284,17 @@
             </tr>
           </thead>
           <tbody>
-            <!-- Add your new timetable rows here -->
             <tr>
+              <td style="padding:12px; border:1px solid #ddd;">Electronics & Robotics</td>
+              <td style="padding:12px; border:1px solid #ddd;">Saturday</td>
+              <td style="padding:12px; border:1px solid #ddd;">10:00 AM – 11:00 AM</td>
+            </tr>
+            <tr style="background-color:#f9f9f9;">
               <td style="padding:12px; border:1px solid #ddd;">Electronics Advanced</td>
               <td style="padding:12px; border:1px solid #ddd;">Sunday</td>
               <td style="padding:12px; border:1px solid #ddd;">10:00 AM – 12:00 PM</td>
             </tr>
-            <tr style="background-color:#f9f9f9;">
+            <tr>
               <td style="padding:12px; border:1px solid #ddd;">Robotics Workshop</td>
               <td style="padding:12px; border:1px solid #ddd;">Sunday</td>
               <td style="padding:12px; border:1px solid #ddd;">1:00 PM – 3:00 PM</td>
@@ -302,6 +306,7 @@
 
   </div>
 </section>
+
   
   <section id="teachers">
     <h2 class="section-title">Our Teachers</h2>
@@ -396,6 +401,7 @@
   
 </body>
 </html>
+
 
 
 
