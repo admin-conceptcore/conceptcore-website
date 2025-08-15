@@ -101,21 +101,7 @@
     
   </style>
 </head>
-  <script>
-  const phrases = [
-    "Friendly Teaching",
-    "Unique Method",
-    "Much More"
-  ];
 
-  let index = 0;
-  const sliderText = document.getElementById("sliderText");
-
-  setInterval(() => {
-    index = (index + 1) % phrases.length;
-    sliderText.textContent = phrases[index];
-  }, 2500); // change every 2.5 seconds
-</script>
 <body>
   <header>
     <h2>The Concept Core Institute</h2>
@@ -311,8 +297,28 @@
     <p>&copy; 2025 The Concept Core Institute. All Rights Reserved.</p>
     <p><a href="#home">Back to Top</a></p>
   </footer>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const phrases = [
+      "Friendly Teaching",
+      "Unique Method",
+      "Much More"
+    ];
+
+    let index = 0;
+    const sliderText = document.getElementById("sliderText");
+
+    setInterval(() => {
+      index = (index + 1) % phrases.length;
+      sliderText.textContent = phrases[index];
+    }, 2500); // update every 2.5 seconds
+  });
+</script>
+  
 </body>
 </html>
+
 
 
 
